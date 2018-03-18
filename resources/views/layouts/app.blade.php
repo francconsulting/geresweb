@@ -71,10 +71,14 @@
             </div>
         </nav>
 
-        @yield('content')
+        @yield('main-content')
+
     </div>
 
     <!-- Scripts -->
-    <script src="{{ asset('js/app.js') }}"></script>
+    <!--<script src="{{ asset('js/app.js') }}"></script>-->
+    @section('scripts')
+        @include('layouts.partials.scripts')
+    @show
 </body>
 </html>

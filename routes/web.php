@@ -18,3 +18,7 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::put('/sanitarios/borrar/{id}', 'Sanitarios\SanitariosController@deleteSoft');
+Route::resource('/sanitarios', 'Sanitarios\SanitariosController');
+Route::post('/sanitarios/index', 'Sanitarios\SanitariosController@postAllSanitario');
